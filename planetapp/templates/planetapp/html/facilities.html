@@ -1,0 +1,92 @@
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilities</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        div.outer{
+            width:500px;
+            height:500px;
+           
+            border: radius 50%;
+            
+           
+        }
+    </style>
+</head>
+<body>
+    {% include 'planetapp/html/navbar.html' %}
+    <div style="width:100%;height:60px;background-color:rgb(238, 238, 210)">
+        <center  style="color:black; font-size: 40px; text-shadow: 4px 7px 5px white;font-family:Arial Black;margin-top: 0px;">Facilities </center>
+    </div>
+
+    
+
+    <div style="width:100%;height:200px;background-color:rgb(231, 232, 223)">
+        <center style="color:BLACK; font-size: 40px; text-shadow: 4px 7px 5px white;font-family:Arial Black;margin-top: 10px;">Transport Facilities</center>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8" style="margin-top: 10px;">
+        <center> <p style="font-size: 20px;color: black;">Our door to door transport facility accompanied by skilled escort provides safe and reliable service to all users. 
+            Ourvehicles are well maintained and drivers are experts.
+
+            We promise an experience that the child cherishes for years to come.</p> </center>
+    </div>
+    </div>
+    </div>
+
+    <div class="row" style="background-color:white; width:100%;height:500px">
+        <div class="col-5" style="margin-left:130px;color:greenyellow">
+            <h1 style="margin-top: 30px;color: BLACK;font-family:Arial Black;font-size: 40px; text-shadow: 4px 7px 5px white">Facilities at Kids Planet</h1>
+            <ul style="color:black;font-size: 20px">
+                <li>Trained & Experience Staff.</li>
+                <li>Homely Atmosphere with Proper Safety & Hygienic Environment.</li>
+                <li>All areas of Kids Planet School Building are under C.C.T.V. surveillance.Building is fully equipped with modern Fire Fighting equipment’s.</li>
+                <li>Fully A.C.& Transport facility available.</li>
+                <li>Separate Room for Boys & Girls above 5 years in Day Care.</li>
+                <li>We invite parents for surprise visit at the time of lunch to taste the food & give their suggestions.</li>
+                <li>We are also starting Evening Tuition Classes.</li>
+                <li>We always welcome parents’ suggestions or complaints.</li>
+                
+            </ul>
+
+        </div>
+        <div class="outer"  style="margin-left:20px;">
+            <img src="{% static 'planetapp/images/k.jpg'%}" class="rounded float-right" alt="this is pic" style="width:350px;height: 350px;margin-left: 100px;margin-top:100px;"> 
+        </div>
+    </div>
+
+    <div class="row" style="background-color:white; width:100%;height:500px">
+        <div class="outer"  style="margin-left:40px;">
+            <img src="{% static 'planetapp/images/ind.jpg'%}" class="rounded float-right" alt="this is pic" style="width:350px;height: 350px;margin-left: 100px;margin-top:100px;"> 
+        </div>
+
+        <div class="col-5" style="margin-left:180px;color:BLACK">
+            <h1 style="margin-top:100px;font-size: 40px; text-shadow: 4px 7px 5px white;font-family:Arial Black;">Activities</h1>
+            <ul  style="color:black;;font-size: 20px">
+                <li>Diwali Celebration</li>
+                <li>National Days Celebration</li>
+                <li>Dussehra Celebration</li>
+                <li>Janmashtami Celebration</li>
+                <li>Id-ul-Fitr Celebration</li>
+                <li>Summer Camp</li>
+                <li>Holi Celebration</li> 
+                <li>Annual Day Celebration</li>           
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+
+
+    {% include 'planetapp/html/footer.html' %}
+</body>
+</html>

@@ -1,0 +1,89 @@
+<html lang="en">
+    {%load static%}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutUs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+<style>
+    div.outer{
+        width:500px;
+        height:500px;
+       
+        border: radius 50%;
+        
+       
+    }
+</style>
+</head>
+<body>
+    
+    {% include 'planetapp/html/navbar.html'%}
+    <div class="text-center p-0 bg-warning p-2 text-white bg-opacity-25 ;">
+        <h1 style="text-align:center;color:black; font-size: 40px; text-shadow: 4px 7px 5px white;font-family:Arial black;margin-top: 10px;">About Our School</h1>
+    </div>
+    <!-- <div class="border border-dark p-2 mb-4"style="margin-top:10px;background-color:antiquewhite"> -->
+    <div class="row" style="background-color:white ;width:100%;height:500px ;color: black">
+        <div class="col-5" style="margin-left:130px;">
+            <h1 style="margin-top: 20px;color:black;font-family:Arial Black">PLAY ROOMR</h1>
+            <p style="font-size:20px;margin-top: 15px;">Neat and Clean equipment for playing like blocks, puzzles, soft toys, musical toys, mathematical toys for learning by mental exercises, ball pool areas, under safe construction, jumping area in a well equipped soft rubber based covered by net. Different type of puppets for children so that they can go through their vast imagination.</p>
+               <p style="font-size:20px;"> Swings, See-Saw, Slides, Swings, Football, Basket Ball and throw the object at a particular goal to make them focused, energetic active and to grow their stamina so that they can become physically and mentally strong and efficient.
+            </p>
+        </div>
+         <div  class="outer">
+           
+            <img src="{% static 'planetapp/images/play.jpg'%}" class="rounded float-left" alt="this is pic"  style="width:300px;height: 300px;;margin-left: 100px;margin-top:80px;">
+
+        </div>
+        
+    </div>
+    
+    <!-- <div class="border border-dark p-2 mb-4"style="margin-top:10px;background-color:white"> -->
+        <div class="row" style="background-color:white; width:100%;height:500px">
+            <div class="outer"  style="margin-left:40px;">
+                <!-- <img src="{% static 'planetapp/images/ab2.jpg'%}" class="d-block w-100" alt="this is pic"  style="width:500px;height: 500px; border-radius: 50%;margin-left: 100px;"> -->
+                <img src="{% static 'planetapp/images/lib.jpg'%}" class="rounded float-right" alt="this is pic" style="width:330px;height: 330px;margin-left: 100px;margin-top:70px;"> 
+            </div>
+
+            <div class="col-5" style="margin-left:180px;color:black">
+                <h1 style="margin-top: 20px;font-size:30px;color: black;font-family:Arial Black">UNLIMITED BOOKS</h1>
+                <p style="font-size:20px;margin-top: 0px;">Kid’s Planet Pre School’s Library includes variety of books which includes, 
+                    Learning, Writing, Drawing, Art & Craft, Story Telling and Rhymes books.</p>
+
+                <p style="font-size:20px;margin-top: 0px;">IT includes picture dictionary books ie. Alphabet, Number and Hindi reading books. 
+                    Rhymes books include Hindi and English interesting and action poems. Story Telling Books includes attractive pictures with imaginative short stories for toddlers as well as for grownup kids.</p>
+                
+                
+                <p style="font-size:20px;margin-top: 0px;">there are interesting art and craft books which covers cognitive skills for their mental growth.</p>
+                
+
+            </div>
+        </div>
+    
+ <!-- <div class="border border-dark p-2 mb-4"style="margin-top:10px;background-color:red"> -->
+        <div class="row" style="background-color:white; width:100%;height:500px">
+            <div class="col-5" style="margin-left:130px;color:black">
+                <h1 style="margin-top: 40px;color:black;font-family:Arial Black">POSITIVE ATMOSPHERE</h1>
+                <p style="font-size:20px;margin-top: 15px;">Kids Planet school gives utmost importance to children’s safety & happiness first & secondly discipline and study.
+                     That’s why each and every corner of the school is full of warmth and care. The management and staff look after the children very tenderly and carefully.
+                      We give stress on cleanliness and hygiene of every classroom, play areas and activity areas etc. The school provides Day care facilities which includes sumptuous and healthy diet & meal. Which is prepared according to children test bud. 
+                      It provides celebration kind of atmosphere.
+                </p>
+
+            </div>
+            <div class="outer"  style="margin-left:20px;">
+                <img src="{% static 'planetapp/images/pot.jpg'%}" class="rounded float-right" alt="this is pic" style="width:350px;height: 350px;margin-left: 100px;margin-top:100px;"> 
+            </div>
+        </div>
+            
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+
+    {% include 'planetapp/html/footer.html' %}
+</body>
+</html>

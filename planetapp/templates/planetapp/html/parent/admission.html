@@ -1,0 +1,269 @@
+<html lang="en">
+  {%load static%}
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>MemberRegistration</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      
+  
+  </head>
+  <body>
+  
+  
+     {% include 'planetapp/html/parent/parent_navbar.html'%}
+     {% if messages %}
+
+     {% for m in messages %}
+     <!-- <h2 >{{m}}</h2> -->
+     
+     <div class="alert alert-success d-flex align-items-center" role="alert" style="width:500px;height:30px;margin-left: 500px;">
+         
+       <div>
+         {{m}}
+         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="margin-left: 250px;float:rite;"></button>
+       </div>
+       
+     </div>
+ 
+     {%endfor%}
+ 
+     {%endif%}
+
+     <center><h1 style="color:black;">Registration Form</h1></center>
+     <div class= "container" style="width:800px;height:900px;margin-left:350px;color:black;margin-top: 40px;">
+
+  <form  method="POST" action="/admission/" class="well form-horizontal needs-validation" novalidate>
+    {% csrf_token %}
+
+  
+
+    <div class="form-group">
+      
+      <label class="col-md-4 control-label">Program Name</label>
+      <div class="col-md-8 inputGroupContainer">
+        <div class="input-group">
+        <span class="input-group-addon"><i class='fas fa-chalkboard-teacher'></i></span>
+      <select class="form-select;col-md-9" name="cmb_name" required="required" style="margin-left:6px;">
+          <option value="default">Select Your Program</option>
+    
+          {% for p in program_key%}
+    
+          <option value="{{p.program_name}}">{{p.program_name}}</option>
+    
+          {%endfor%}
+        </select>
+      <div class="invalid-feedback">
+          Please provide your Programe name.
+      </div>
+    </div>
+  </div>
+    </div>
+
+
+      <div class="form-group">
+       
+         <label class="col-md-4 control-label">Kid Name</label>
+         <div class="col-md-8 inputGroupContainer">
+          <div class="input-group">
+          <span class="input-group-addon"> <i class='fas fa-user-alt'></i></span>
+         <input type="text"  required class="form-control" name="txtkid" aria-describedby="passwordHelp" style="margin-left:6px;" placeholder="Enter kid name">
+        
+         <div class="invalid-feedback">
+          Please provide kid name.
+       </div>
+       </div>
+      </div>
+    </div>
+
+   
+   
+  
+       <div class="form-group">
+   
+    <label class="col-md-4 control-label">Kid Age</label>
+    <div class="col-md-8 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"> <i class="fa fa-birthday-cake"></i></span>
+   
+    <input type="number" required="required" class="form-control" name="txtage" id="txtuserpass"style="margin-left:6px;" placeholder="Enter kid age">
+    <div class="invalid-feedback">
+      Kid age required.
+   </div>
+  </div>
+</div>
+</div>
+
+
+  <div class="form-group">
+    
+    <label class="col-md-4 control-label">Mother Name</label>
+    <div class="col-md-8 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class='fas fa-user-alt'></i></span>
+     <input type="text"  required class="form-control" name="txtmother" aria-describedby="passwordHelp" style="margin-left:6px;" placeholder="Enter Mother name">
+    
+     <div class="invalid-feedback">
+      Mother Name Required.
+   </div>
+   </div>
+  </div>
+</div>
+
+
+   <div class="form-group">
+    
+    <label class="col-md-4 control-label">Father Name</label>
+    <div class="col-md-8 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class='fas fa-user-alt'></i></span>
+     <input type="text"  required class="form-control" name="txtfather" aria-describedby="passwordHelp" style="margin-left:6px;" placeholder="Enter Father name">
+    
+     <div class="invalid-feedback">
+      Father Name Required .
+   </div>
+   </div>
+  </div>
+</div>
+
+
+ <div class="form-group">
+     
+      <label class="col-md-4 control-label">Phone</label>
+      <div class="col-md-8 inputGroupContainer">
+        <div class="input-group">
+        <span class="input-group-addon"> <i class="fa fa-phone-square"></i></span>
+      <input type="number"  class="form-control" name="txtphone" aria-describedby="IdHelp" required="required" style="margin-left:6px;"placeholder="+91">
+
+      <div class="invalid-feedback">
+        Required Phone Number .
+     </div>
+   </div>
+  </div>
+</div>
+
+
+   <div class="form-group">
+    
+    <label class="col-md-4 control-label">Email</label>
+    <div class="col-md-8 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+    <input type="email" class="form-control" name="txtemail" required="required" placeholder="Enter email" style="margin-left:6px;">
+
+    <div class="invalid-feedback">
+        Required Email.
+      </div>
+</div>
+</div>
+</div>
+
+
+<div class="form-group">
+    
+    <label class="col-md-4 control-label"> Address</label>
+    <div class="col-md-8 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-home"></i></span>
+    <textarea  required class="form-control" name="txtaddress" aria-describedby="emailHelp" style="margin-left:6px;" placeholder="Enter your address "></textarea>
+    <div class="invalid-feedback">
+      Please provide your address.
+   </div>
+    </div>
+  </div>
+</div>
+
+
+   <div class="form-group">
+        
+        <label class="col-md-4 control-label">Kid Gender</label>
+        <div class="col-md-8 inputGroupContainer">
+          <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-mars"></i></span>
+        <input type="radio"  required class="form-check-input " name="gender" style="margin-left:6px;">
+        <label class="form-check-label" for="MaleLabel">
+          Male
+        </label>
+        <input type="radio"  required class="form-check-input" name="gender" style="margin-left:6px;">
+        <label class="form-check-label" for="FemaleLabel">
+          Female
+        </label>
+        <div class="invalid-feedback">
+          Gender required.
+       </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+     <div class="form-group">
+       
+        <label class="col-md-4 control-label">School Name</label>
+        <div class="col-md-8 inputGroupContainer">
+          <div class="input-group">
+          <span class="input-group-addon"> <i class='fas fa-user-alt'></i></span>
+         <input type="text"  required class="form-control" name="txtschool" aria-describedby="passwordHelp" style="margin-left:6px;" placeholder="Enter school name">
+        
+         <div class="invalid-feedback">
+          School Name Required .
+       </div>
+       </div>
+      </div>
+    </div>
+
+
+<div class="form-group">
+    
+    <label class="col-md-4 control-label">Transaction Number</label>
+    <div class="col-md-8 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-address-book"></i></span>
+    <input type="text" required="required" class="form-control" name="txttransaction" id="txttransaction" style="margin-left:6px;" placeholder="Enter Transaction number">
+    
+    <div class="invalid-feedback">
+      Transaction Number required.
+   </div>
+  </div>
+</div>
+</div>
+
+  
+<div class="form-group"style=>
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4"><br>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit" class="btn btn-warning" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSUBMIT <span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+  </div>
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4"><br>
+    
+</div>
+</div>
+
+
+</form>
+</div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+
+    <script src="{% static 'planetapp/js/validation.js'%}"></script>
+    {% include 'planetapp/html/footer.html' %}
+</body>
+</html>
+   
+  
+
+
+
+
+
+
+
+
+
+
